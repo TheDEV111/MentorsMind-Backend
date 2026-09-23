@@ -43,7 +43,7 @@ We use `node-pg-migrate` for database schema versioning and migrations.
 # Run pending migrations
 npm run migrate:up
 
-# Rollback last migration
+# Rollback all migrations to baseline
 npm run migrate:down
 
 # Check migration status
@@ -51,6 +51,12 @@ npm run migrate:status
 
 # Create a new migration
 npm run migrate:create <migration-name>
+
+# Fully reset and re-seed the development database
+npm run db:reset
+
+# Fully reset and re-seed the test database
+npm run db:reset:test
 ```
 
 ### Migration Workflow
